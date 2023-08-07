@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  vars:
+    ansible_host_key_checking: fasle
+  become: true
+
+  tasks:
+    - name: Shutdown
+      command: /sbin/shutdown -h now
