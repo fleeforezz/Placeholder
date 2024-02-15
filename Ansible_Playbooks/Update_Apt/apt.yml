@@ -11,8 +11,8 @@
         update_cache: yes
         upgrade: yes
     
-    - name: apt-get auto-remove
-      command: apt-get -y autoremove
+    # - name: apt-get auto-remove
+    #   command: apt-get -y autoremove
 
-    - name: apt-get clean
-      command: apt-get -y clean
+    # - name: apt-get clean
+    #   command: apt-get -y clean
