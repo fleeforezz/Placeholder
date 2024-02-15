@@ -3,7 +3,7 @@
   vars:
     ansible_host_key_checking: false ##If you get an error about hosts not trusted
   become: true
-  become_method: sudo
+  become_user: root
 
   tasks:
     - name: Update and upgrade apt packages
@@ -11,8 +11,8 @@
         update_cache: yes
         upgrade: yes
     
-    # - name: apt-get auto-remove
-    #   command: apt-get -y autoremove
+    - name: apt-get auto-remove
+      command: apt-get -y autoremove
 
-    # - name: apt-get clean
-    #   command: apt-get -y clean
+    - name: apt-get clean
+      command: apt-get -y clean
