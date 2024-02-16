@@ -6,6 +6,12 @@
   become_user: root
 
   tasks:
+    - name: packages | ensure apt list dir exists
+      file:
+        path: /var/lib/apt/lists/
+        state: directory
+        mode: 0755
+        
     - name: Update and upgrade apt packages
       apt:
         update_cache: yes
@@ -15,7 +21,7 @@
       command: apt-get -y autoremove
 
     - name: apt-get clean
-      command: apt-get -y clean
+      command: apt-get -y clear
 
 # ---
 # - hosts: all
