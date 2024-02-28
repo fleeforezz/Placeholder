@@ -12,10 +12,10 @@
         upgrade: yes
     
     - name: apt-get auto-remove
-      command: apt-get -y autoremove
+      command: apt-get autoremove -y
 
     - name: apt-get clean
-      command: apt-get -y clear
+      command: apt-get clear -y
 
 # ---
 # - hosts: all
