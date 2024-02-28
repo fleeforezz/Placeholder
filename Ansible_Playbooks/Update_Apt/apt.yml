@@ -10,12 +10,6 @@
       apt:
         update_cache: yes
         upgrade: yes
-    
-    - name: apt-get auto-remove
-      command: apt-get autoremove -y
-
-    - name: apt-get clean
-      command: apt-get clear -y
 
 # ---
 # - hosts: all
